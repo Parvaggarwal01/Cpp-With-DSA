@@ -28,7 +28,7 @@ int pivotIndex(int arr[], int size) {
 int main(){
     int even[5] = {8, 10, 17, 1, 3};
 
-    cout << "Pivot Index in array is " << pivotIndex(even, 6) << endl;
+    cout << "Pivot Index in array is " << pivotIndex(even, 5) << endl;
 
 
     return 0;
