@@ -17,7 +17,13 @@ void bubbleSort(int arr[], int n)
 int main()
 {
     int arr[5] = {6,2,8,4,10};
+    cout << "Mixed Array: ";
+    for(int i = 0; i<5; i++){
+        cout << arr[i] << " ";
+    }
+    cout << endl;
     bubbleSort(arr, 5);
+    cout << "Sorted Array: ";
     for(int i = 0; i<5; i++){
         cout << arr[i] << " ";
     }
