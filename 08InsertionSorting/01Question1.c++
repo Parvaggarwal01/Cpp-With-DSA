@@ -22,13 +22,13 @@ int main(){
     int arr[7] = {10, 1, 7, 4, 8, 2, 11};
     cout << "Mixed Array: ";
     for(int i = 0; i<7; i++){
-        cout << arr[i] << " ";
+        cout << arr[i] << ", ";
     }
     cout << endl;
     insertionSort(arr, 7);
     cout << "Sorted Array: ";
     for(int i = 0; i<7; i++){
-        cout << arr[i] << " ";
+        cout << arr[i] << ", ";
     }
     cout << endl;
 }
