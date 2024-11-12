@@ -95,26 +95,75 @@ void postorder(node* root){
     cout << root -> data << " ";
 }
 
+void buildFromLevelOrder(node*& root){
+    // Read the root node data
+    cout << "Enter the data for root: " << endl;
+    int data;
+    cin >> data;
+    
+    // If the data is -1, we assume it's a null tree.
+    if(data == -1){
+        root = nullptr;
+        return;
+    }
+
+    // Initialize the root node
+    root = new node(data);
+
+    // Create a queue for level order traversal
+    queue<node*> q;
+    q.push(root);
+
+    // Process the nodes in level order
+    while(!q.empty()){
+        node* temp = q.front();
+        q.pop();
+
+        // Input the left child
+        cout << "Enter left node for "  << temp->data << " (-1 for null): " << endl;
+        int leftData;
+        cin >> leftData;
+
+        if(leftData != -1){
+            temp->left = new node(leftData);
+            q.push(temp->left);
+        }
+
+        // Input the right child
+        cout << "Enter right node for "  << temp->data << " (-1 for null): " << endl;
+        int rightData;
+        cin >> rightData;
+
+        if(rightData != -1){
+            temp->right = new node(rightData);
+            q.push(temp->right);
+        }
+    }
+}
+
+
 int main() {
     
     node* root = NULL;
 
+    buildFromLevelOrder(root);
+
     // creating Tree
-    root = buildTree(root);
+    // root = buildTree(root);
 
     cout << "Level order traversal: " << endl;
     levelOrderTraversal(root);
     cout << endl;
 
-    cout << "Inorder traversal: " << endl;
-    inorder(root);
-    cout << endl;
+    // cout << "Inorder traversal: " << endl;
+    // inorder(root);
+    // cout << endl;
 
-    cout << "Preorder traversal: " << endl;
-    preorder(root);
-    cout << endl;
+    // cout << "Preorder traversal: " << endl;
+    // preorder(root);
+    // cout << endl;
 
-    cout << "Postorder traversal: " << endl;
-    postorder(root);
-    cout << endl;
+    // cout << "Postorder traversal: " << endl;
+    // postorder(root);
+    // cout << endl;
 }
