@@ -69,8 +69,8 @@ class heap {
 
     void heapify(int arr[], int n, int i){
         int largest = i;
-        int left = 2*i;
-        int right = 2*i+1;
+        int left = 2*i + 1;
+        int right = 2*i + 2;
 
         if(left < n && arr[largest] < arr[left]){
             largest = left;
@@ -100,12 +100,12 @@ int main(){
     h.deletion();
     h.print();
 
-    int arr[6] = {-1, 54, 53, 55, 52, 50};
+    int arr[5] = {54, 53, 55, 52, 50};
     
-    int n = 5;
+    int n = 4;
 
     
-    for(int i = n/2; i>0; i--){
+    for(int i = n/2 - 1; i>=0; i--){
         heapify(arr, n, i);
     }
 
