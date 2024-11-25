@@ -34,7 +34,7 @@ vector<int> bfs(vector<vector<int> >& adj){
         q.pop();
         results.push_back(top);
 
-        for(int i = 0; i<adj[top].size(); i++){
+        for(int i : adj[top]){
             if(!visited[adj[top][i]]){
                 q.push(adj[top][i]);
                 visited[adj[top][i]] = true;
