@@ -100,17 +100,17 @@ int main(){
     h.deletion();
     h.print();
 
-    int arr[5] = {54, 53, 55, 52, 50};
+    int arr[4] = {10, 5, 15, 20};
     
     int n = 4;
 
     
-    for(int i = n/2 - 1; i>=0; i--){
+    for(int i = n/2 ; i>=0; i--){
         heapify(arr, n, i);
     }
 
     cout << "Printing the array now" << endl;
-    for(int i = 1; i<=n; i++){
+    for(int i = 0; i<=n; i++){
         cout << arr[i] << " ";
     }cout << endl;
 
