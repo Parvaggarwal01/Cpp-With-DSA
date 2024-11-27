@@ -35,9 +35,9 @@ vector<int> bfs(vector<vector<int> >& adj){
         results.push_back(top);
 
         for(int i : adj[top]){
-            if(!visited[adj[top][i]]){
-                q.push(adj[top][i]);
-                visited[adj[top][i]] = true;
+            if(!visited[i]){
+                q.push(i);
+                visited[i] = true;
             }
         }
     }
